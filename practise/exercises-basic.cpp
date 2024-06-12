@@ -60,22 +60,6 @@ int exercise_76()
     return 0;
 }
 
-vector<int> exercise_281(int arr[])
-{
-    int size = getArraySize(arr);
-    int arr2[size];
-
-    for (int i = 0; i < size; i++)
-    {
-        if (arr[i] % 2 == 0)
-        {
-            arr2[i] = arr[i];
-        }
-    }
-
-    return 0;
-}
-
 int main()
 {
     // Ex. 51
@@ -83,7 +67,7 @@ int main()
     // cout << "Result 51_1: " << getResultString(reault_51_1) << endl; // Expected output: 1
 
     // Ex. 76
-    exercise_76();
+    // exercise_76();
 
     return 0;
 }

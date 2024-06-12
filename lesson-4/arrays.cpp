@@ -40,13 +40,15 @@ int main()
     // printArray(arr, 5);
 
     // Return Array from function ------------
+
     // The best way to return an array from a function in C++ is to use a container like std::vector or std::array.
     // These containers manage memory automatically and are safer to use than raw arrays.
 
-    vector<int> arr2 = getArray();
-    for (int i = 0; i < arr2.size(); i++)
-    {
-        cout << "Element at index " << i << " is " << arr2[i] << endl;
-    }
+    // vector<int> arr2 = getArray();
+    // for (int i = 0; i < arr2.size(); i++)
+    // {
+    //     cout << "Element at index " << i << " is " << arr2[i] << endl;
+    // }
+
     return 0;
 }
