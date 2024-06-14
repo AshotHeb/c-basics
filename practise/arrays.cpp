@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <map>
 using namespace std;
 
 void printArray(vector<int> arr)
@@ -74,20 +75,25 @@ vector<int> exercise_382(vector<int> array1, vector<int> array2)
     return result;
 }
 
-vector<int> exercise_420(vector<int> array)
+map<int, int> exercise_420(vector<int> array)
 {
-    struct NumberDataInArray
-    {
-        int value;
-        int count;
-    };
-
+    map<int, int> numberCountsInArray;
 
     const int size = array.size();
 
-    for(int i = 0 ; i< size;i++) {
-        const int item = array[i];
+    for (int i = 0; i < size; i++)
+    {
+        const int item = numberCountsInArray[array[i]];
+        if (item == 0)
+        {
+            numberCountsInArray[array[i]] = 1;
+        }
+        else
+        {
+            numberCountsInArray[array[i]] = item + 1;
+        }
     }
+    return numberCountsInArray;
 }
 
 int main()
@@ -108,7 +114,11 @@ int main()
     // ################# Ex. 420 #################
 
     const vector<int> exercise_420_array = {1, 2, 3, 4, 5, 1, 2, 3, 4, 5};
-    const vector<int> result_420 = exercise_420(exercise_420_array);
+    const map<int, int> result_420 = exercise_420(exercise_420_array);
+    // for (auto const &item : result_420)
+    // {
+    //     cout << "Number " << item.first << " appears " << item.second << " times" << endl;
+    // }
 
     return 0;
 }
